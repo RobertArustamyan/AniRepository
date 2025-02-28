@@ -1,0 +1,14 @@
+{
+    "Authentication Bypass": "Use parameterized queries to prevent SQL injection.",
+    "Union-based Injection": "Use parameterized queries to prevent UNION-based SQL injection.",
+    "Table Deletion": "Avoid direct user input in DROP queries; use parameterized queries.",
+    "Logical Bypass": "Sanitize input to prevent logical bypass attacks.",
+    "Insert Injection": "Avoid direct user input in INSERT queries; use parameterized queries.",
+    "Update Injection": "Use parameterized queries to prevent UPDATE queries from being exploited.",
+    "Delete Injection": "Avoid direct user input in DELETE queries; use parameterized queries.",
+    "Command Injection": "Sanitize input to prevent command injections.",
+    "Time-based Injection": "Sanitize input to prevent time-based SQL injection.",
+    "Schema Enumeration": "Use input validation to block dangerous SQL keywords.",
+    "Data Extraction": "Sanitize input to prevent data extraction from sensitive tables.",
+    "Conditional Query": "Use input validation to block dangerous SQL keywords."
+}

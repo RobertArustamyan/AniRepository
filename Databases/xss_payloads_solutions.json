@@ -1,0 +1,19 @@
+{
+    "HTML Injection": "Use HTML escaping for user inputs.",
+    "JavaScript URI Injection": "Avoid using javascript: in href attributes.",
+    "Inline Event Handler": "Avoid using inline event handlers like onmouseover.",
+    "SVG Injection": "Sanitize SVG content and avoid onload attributes.",
+    "Embedded Script Injection": "Use CSP to block unsafe embedded content.",
+    "JavaScript Execution": "Avoid using document.location with JavaScript.",
+    "Image Onerror Injection": "Sanitize input to prevent onerror attributes in image tags.",
+    "Form Action Injection": "Avoid using JavaScript in form actions.",
+    "Base Tag Injection": "Avoid using base tags with JavaScript.",
+    "Object Data Injection": "Sanitize object tags to prevent unsafe data attributes.",
+    "Eval Injection": "Avoid using eval() in JavaScript.",
+    "Details-Summary Injection": "Sanitize details and summary tags to prevent XSS.",
+    "Video Onerror Injection": "Sanitize video tags to prevent onerror attributes.",
+    "Iframe Injection": "Use CSP to block unsafe iframe sources.",
+    "Attribute Injection": "Sanitize input to prevent script injection in attributes.",
+    "Quote Injection": "Use proper escaping for quotes in user inputs.",
+    "SVG Animation Injection": "Sanitize input to prevent script injection in SVG animations."
+}
