@@ -85,7 +85,7 @@ def load_payloads_and_solutions(attack_type):
 # 🔹 SQLi detection function
 def detect_sqli(query, src_ip):
     payloads, solutions = load_payloads_and_solutions("sqli")
-    
+
     for i, payload in enumerate(payloads):
         if payload in query:
             log_attack("SQLi", src_ip, query, solutions[i])
@@ -200,10 +200,8 @@ def check_admin_access():
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Web Vulnerability Scanner")
     parser.add_argument("--scan", action="store_true", help="Start scanning for vulnerabilities")
-    parser.add_argument("--report", action="store_true", help="Generate PDF report")
     parser.add_argument("--url", type=str, help="URL of the website to scan", required=True)
-    parser.add_argument("--admin", action="store_true", help="Access admin features")
-    
+
     args = parser.parse_args()
 
     if args.admin:

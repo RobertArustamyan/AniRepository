@@ -4,7 +4,7 @@ import requests
 
 # Set thresholds for detecting different types of attacks
 UDP_THRESHOLD = 1000  # Max UDP packets/sec
-SYN_THRESHOLD = 500   # Max SYN packets/sec
+SYN_THRESHOLD = 500  # Max SYN packets/sec
 
 # Dictionaries to track IPs associated with each attack type
 udp_ips = {}
@@ -13,14 +13,12 @@ syn_ips = {}
 # Timer to measure elapsed time
 start_time = time.time()
 
-# Target URL to scan (WebGoat)
-target_url = "http://webgoat.us"  # Set the target URL
 
 def detect_ddos(packet):
     """Detects DDoS attacks based on packet type"""
     if packet.haslayer(scapy.IP):
         src_ip = packet[scapy.IP].src
-        
+
         # Track UDP Flood
         if packet.haslayer(scapy.UDP):
             udp_ips[src_ip] = udp_ips.get(src_ip, 0) + 1
@@ -34,6 +32,7 @@ def detect_ddos(packet):
         if elapsed_time >= 5:  # Prints every 5 seconds
             identify_attack_and_protect()
             reset_tracking()
+
 
 def identify_attack_and_protect():
     """Identifies the attack type and IP, and provides protection solutions"""
@@ -51,7 +50,8 @@ def identify_attack_and_protect():
             # os.system("sudo sysctl -w net.ipv4.tcp_syncookies=1")  # Uncomment to enable SYN cookies
 
     if not attack_detected:
-        print(f"No DDoS vulnerabilities detected for the target URL {target_url}.")
+        print(f"No DDoS vulnerabilities detected for the target URL.")
+
 
 def reset_tracking():
     """Resets the attack detection counts after printing results"""
@@ -61,10 +61,14 @@ def reset_tracking():
     global start_time
     start_time = time.time()  # Reset the timer
 
-def start_detection():
+
+def start_detection(target_url):
     """Starts the DDoS detection process"""
     print(f"Starting DDoS detection for {target_url}...")
     scapy.sniff(filter="ip", prn=detect_ddos, store=False, count=1000)
 
+
 if __name__ == "__main__":
-    start_detection()
+    # Take target URL as input from the user
+    target_url = "https://xss-game.appspot.com/level1/frame"
+    start_detection(target_url)

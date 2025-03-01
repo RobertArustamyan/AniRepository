@@ -1,8 +1,10 @@
 import argparse
 from Utilites.xss import detect_xss
+from Utilites.ddos import start_detection
 from Utilites.toPDF import to_pdf
 from dotenv import load_dotenv
 import os
+
 
 if __name__ == '__main__':
     load_dotenv()
@@ -36,7 +38,7 @@ if __name__ == '__main__':
 
     if args.ddos:
         print("Running DDoS scan...")
-        pass
+        start_detection(args.url)
 
     if args.all:
         print("Running all scans...")
